@@ -41,5 +41,14 @@ console.log(listItemsNodes);
 
 
 // DOM attributes
+var headingElement = document.querySelector('h1');
 
+console.log(headingElement);
 
+headingElement.title = "Title test";
+
+headingElement.setAttribute('class', 'oke');
+
+console.log(headingElement.getAttribute('class', 'heading'));
+console.log(headingElement.getAttribute('title'));
+console.log(headingElement.title);
