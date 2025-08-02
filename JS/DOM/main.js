@@ -38,7 +38,6 @@ var listItemsNodes = document.querySelectorAll('.box-1 li');
 var boxNode = document.querySelectorAll('.box-1');
 
 console.log(listItemsNodes);
-console.log(boxNode.querySelectorAll('li'));
 
 
 // DOM attributes
