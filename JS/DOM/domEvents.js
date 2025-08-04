@@ -5,8 +5,58 @@
 
 var h1Elements = document.querySelectorAll('.dom');
 
-for (var i = 0; i < h1Elements.length; i++) {
-    h1Elements[i].onclick = function(e) {
-        console.log(e.target);
+// for (var i = 0; i < h1Elements.length; i++) {
+//     h1Elements[i].onclick = function(e) {
+//         console.log(e.target);
+//     }
+// }
+
+// 1. Input / select
+// 2/ Key up / down
+
+var inputValue;
+
+var inputElement = document.querySelector('input[type="text"]');
+
+// inputElement.oninput = function(e) {
+//     console.log(e.target.value);
+// }
+
+var checkElement = document.querySelector('input[type="checkbox"]');
+
+checkElement.onchange = function(e) {
+    console.log(e.target.checked);
+}
+
+inputElement.onkeyup = function(e) {
+    console.log(e);
+}
+
+document.onkeydown = function(e) {
+    switch(e.which) {
+        case 27: 
+            console.log('EXIT');
+            break;
+        case 13:
+            console.log('SEND CHAT');
+            break;
     }
 }
+
+// 1. preventDefault
+// 2. stoopPropagation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -36,3 +36,5 @@ setInterval(() => {
     boxElement.classList.remove('red');
 }, 3000);
 
+
+
