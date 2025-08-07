@@ -1,3 +1,7 @@
+// Backend -> API(URL) -> Fetch -> JSON/XML
+// JSON.parse -> Javascript types
+// ->
+
 var postApi = "https://jsonplaceholder.typicode.com/posts";
 
 fetch(postApi)
