@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- <style>
+      .red {
+        color: red;
+      }
+
+      ul {
+        display: none;
+      }
+
+      input:focus ~ ul {
+        display: block;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- <h1 class="heading">Javascript basic</h1>
+    
+    <div class="box">
+        <h2 class="heading-2">Heading - 2</h2>
+        <h2 class="heading-2">Heading - 2</h2>
+        <h2 class="heading-2">Heading - 2</h2>
+        <h2 class="heading-2">Heading - 2</h2>
+        <h2 class="heading-2">Heading - 2</h2>
+    </div>
+
+    <form action="" id="form-1"></form>
+    <form action="" id="form-2"></form>
+
+    <div class="box-1">
+        <ul>
+            <li>Javascript 2</li>
+            <li>PHP 2</li>
+        </ul>
+
+        <p>Test program</p>
+    </div>
+
+    <div class="box">
+        <h1 id="heading" class="heading" title="Heading">Heading</h1>
+    </div>
+
+    <h1 class="heading2" contenteditable="">New Heading</h1>
+
+    <div class="box2 box-2">
+        <h1>CLASS LIST</h1>
+    </div>
+
+    <h1 class="dom">
+        <span>DOM events 1</span>
+    </h1>
+
+    <h1 class="dom">
+        <span>DOM events 2</span>
+    </h1>
+
+    <h1 class="dom">
+        <span>DOM events 3</span>
+    </h1>
+
+    <input type="text">
+    <input type="checkbox">
+
+    <select>
+        <option value="1">Javascript</option>
+        <option value="2">PHP</option>
+        <option value="3">Dart</option>
+    </select>
+
+    <a href="https://f8.edu.vn">Javascript basic</a>
+
+    <a href="https://google.com.vn">Google</a>
+
+-->
+    <!-- <input type="text" placeholder="Tim kiem">
+    
+    <ul> 
+        <li>Javascript</li>
+        <li>Golang</li>
+        <li>Java</li>
+    </ul> -->
+    <!-- 
+    <div>
+        DIV
+
+        <button>Click me!</button>
+    </div> -->
+
+    <!-- <button id="btn">Click me!</button> -->
+
+    <!-- <ul id="comments-block"></ul> -->
+    <!-- <ul id="posts-block"></ul> -->
+
+    <div class="main">
+      <form action="" method="POST" class="form" id="form-1">
+        <h3 class="heading">Thành viên đăng ký</h3>
+        <p class="desc">Chào mừng các bạn ❤️</p>
+
+        <div class="spacer"></div>
+
+        <div class="form-group">
+          <label for="fullname" class="form-label">Tên đầy đủ</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="VD: Nguyễn Hoàng Hiếu"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            placeholder="VD: email@domain.com"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Mật khẩu</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Nhập mật khẩu"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password_confirmation" class="form-label"
+            >Nhập lại mật khẩu</label
+          >
+          <input
+            id="password_confirmation"
+            name="password_confirmation"
+            placeholder="Nhập lại mật khẩu"
+            type="password"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <button class="form-submit">Đăng ký</button>
+      </form>
+    </div>
+
+    <!-- Thêm file .js -->
+    <script src="./validator.js"></script>
+
+    <script>
+      Validator({
+        form: "#form-1",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#fullname"),
+          Validator.isEmail("#email"),
+          Validator.minLength("#password", 6),
+          Validator.isRequired("#password_confirmation"),
+          Validator.isConfirmed(
+            "#password_confirmation",
+            function () {
+              return document.querySelector("#form-1 #password").value.trim();
+            },
+            "Mật khẩu nhập lại không chính xác"
+          ),
+        ],
+      });
+    </script>
+  </body>
+</html>

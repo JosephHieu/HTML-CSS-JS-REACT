@@ -5,7 +5,7 @@
 //   var course = "Javascript basic";
 // }
 
-let a = 10;
+// let a = 10;
 
 // 3. Multi-line String
 const courseName = "Javascript";
@@ -41,7 +41,7 @@ const course = {
 
 console.log(course.getName());
 
-// 6. Classes
+// 5. Classes
 // function Course(name, price) {
 //   this.name = name;
 //   this.price = price;
@@ -67,3 +67,37 @@ const jsCourse = new Course("Javascript", 1500);
 
 console.log(phpCourse);
 console.log(jsCourse);
+
+// 6. Default parameter values
+function logger(log = "Gia tri mac dinh") {
+  console.log(log);
+}
+
+logger(undefined);
+
+// 7. Enhanced Object literals
+// Định nghĩa key: value cho object
+// Định nghĩa method cho object
+// Định nghĩa key cho object dưới dạng biến
+
+var fieldName = "JS";
+var price = 1000;
+
+var courses = {
+  fieldName,
+  price,
+  getName() {
+    return price;
+  },
+};
+
+// Destructuring trong Javascript ES6
+var array = ["Javascript", "PHP", "Ruby"];
+
+var [a, b, ...rest] = array;
+
+console.log(a, b);
+console.log(rest);
+
+var { fieldName, price } = courses;
+console.log(fieldName, price);
