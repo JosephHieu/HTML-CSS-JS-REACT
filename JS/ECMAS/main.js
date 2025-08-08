@@ -52,6 +52,14 @@ class Course {
     this.name = name;
     this.price = price;
   }
+
+  getName() {
+    return this.name;
+  }
+
+  getPrice() {
+    return this.price;
+  }
 }
 
 const phpCourse = new Course("PHP", 1000);
